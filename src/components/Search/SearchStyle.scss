@@ -1,0 +1,81 @@
+// Global
+@import "../../global.scss";
+
+.Search {
+  &-searchBar {
+    font-family: $roboto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0px 11px 20px 0px rgba(145, 145, 145, 0.16);
+    padding: 8px 16px;
+    margin-top: 40px;
+  }
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: $color-dark-blue;
+
+      @media screen and (max-width: $responsiveTablet) {
+        display: none;
+      }
+    }
+
+    input {
+      font-family: $roboto;
+      font-weight: 500;
+      font-style: 16px;
+      color: $color-dark-blue;
+      border: none;
+      outline: none;
+      width: 400px;
+
+      @media screen and (max-width: $responsiveTablet) {
+        width: 260px;
+        font-size: 12px;
+      }
+
+      @media screen and (max-width: $responsiveAnotherMobile) {
+        width: 100%;
+      }
+    }
+
+    input {
+      transition: all 0.3s ease;
+    }
+
+    input::placeholder {
+      color: $color-dark-blue;
+    }
+
+    input:focus::placeholder {
+      color: $color-placeholder;
+    }
+  }
+  &-right {
+    button {
+      background-color: $color-yellow;
+      box-shadow: 0px 11px 20px 0px rgba(145, 145, 145, 0.16);
+      border-radius: 8px;
+      padding: 12px 50px;
+      color: $color-dark-blue;
+      font-style: 16px;
+      font-family: $roboto;
+      font-weight: 700;
+      outline: none;
+      border: none;
+      cursor: pointer;
+
+      @media screen and (max-width: $responsiveTablet) {
+        padding: 8px 16px;
+      }
+    }
+  }
+}

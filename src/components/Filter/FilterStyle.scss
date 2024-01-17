@@ -1,0 +1,25 @@
+@import "../../global.scss";
+
+.filter-wrapper {
+  cursor: pointer;
+  padding: 12px 24px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background-color: white;
+  border: 2px solid $color-dark-grey-opacity;
+  border-radius: 999px;
+  .logo {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__content {
+    font-family: $roboto;
+    font-size: 14px;
+    font-weight: 700;
+    color: $color-dark-grey;
+  }
+}

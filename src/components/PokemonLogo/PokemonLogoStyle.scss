@@ -1,0 +1,14 @@
+@import "../../global.scss";
+
+.pokemonPage {
+  &-logo {
+    margin-top: 48px;
+    @media screen and (max-width: $responsiveMobile) {
+      margin-bottom: 20px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
