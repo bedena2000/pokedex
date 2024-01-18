@@ -7,6 +7,8 @@ $color-placeholder: rgba(65, 110, 223, 0.6);
 $color-dark-grey: #212121;
 $color-dark-grey-opacity: rgba(33, 33, 33, 0.16);
 $color-hover-background: rgba(33, 33, 33, 0.08);
+$color-light-grey: #F5F7FB;
+$color-btn-background: #C9D2EA;
 
 $roboto: "Roboto";
 
@@ -15,12 +17,16 @@ $responsiveAnotherMobile: "425px";
 $responsiveTablet: "768px";
 $responsiveLaptot: "1024px";
 
+$indexBackground: 2;
+$indexModal: 3;
+
 body {
   box-sizing: border-box;
   min-height: 100vh;
   margin: 0px;
   padding: 0px;
   background-color: $color-global;
+  padding-top: 48px;
 }
 
 .prime-container {

@@ -1,8 +1,13 @@
 import "./FilterStyle.scss";
 
+// Redux
+import { UseSelector, useDispatch } from "react-redux";
+import { changeModal } from "../../store/slices/modalSlice";
+
 const Filter = () => {
+  const dispatch = useDispatch();
   return (
-    <div className="filter-wrapper">
+    <div className="filter-wrapper" onClick={() => dispatch(changeModal())}>
       <div className="filter-wrapper-logo">
         <svg
           width="16"

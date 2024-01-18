@@ -2,7 +2,6 @@
 
 .pokemonPage {
   &-logo {
-    margin-top: 48px;
     @media screen and (max-width: $responsiveMobile) {
       margin-bottom: 20px;
       img {

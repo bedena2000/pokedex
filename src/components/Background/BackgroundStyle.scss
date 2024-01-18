@@ -1,0 +1,11 @@
+@import '../../global.scss';
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-color: $color-dark-grey-opacity;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: $indexBackground;
+}

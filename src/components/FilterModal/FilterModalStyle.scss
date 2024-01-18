@@ -1,0 +1,185 @@
+@import "../../global.scss";
+
+.filter-modal {
+  width: 366px;
+  height: 100vh;
+  background-color: $color-global;
+  z-index: $indexModal;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(33, 33, 33, 0.24);
+    p {
+      font-family: $roboto;
+      font-size: 20px;
+      font-weight: 700;
+      color: $color-dark-grey;
+    }
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  &-types {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &-title {
+      font-family: $roboto;
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(33, 33, 33, 0.6);
+    }
+
+    &-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(9, 1fr);
+      gap: 13px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+
+      label {
+        font-family: $roboto;
+        font-weight: 500;
+        font-size: 16px;
+        color: $color-dark-grey;
+      }
+    }
+  }
+
+  &-height {
+    padding: 20px;
+    p {
+      font-family: $roboto;
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(33, 33, 33, 0.6);
+      margin-bottom: 16px;
+    }
+
+    &-top {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 59px;
+
+      &-item {
+        width: 48px;
+        height: 48px;
+        background-color: $color-dark-grey-opacity;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        &:hover {
+          background-color: $color-dark-blue;
+        }
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      &-item {
+        width: 48px;
+        height: 48px;
+        background-color: $color-dark-grey-opacity;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s ease;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $color-dark-blue;
+        }
+
+        .circle {
+          width: 10px;
+          height: 10px;
+          border-radius: 100%;
+          background-color: black;
+        }
+
+        .circle-sm {
+          width: 10px;
+          height: 10px;
+        }
+
+        .circle-md {
+          width: 14px;
+          height: 14px;
+        }
+
+        .circle-lg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+
+  &-save {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    &__reset {
+      color: $color-dark-blue;
+      border-radius: 8px;
+      border: 1px solid $color-dark-blue;
+      padding: 12px 32px;
+      margin: 0px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: $roboto;
+      cursor: pointer;
+      transition: all .3s ease;
+
+      &:hover {
+        background-color: $color-dark-grey-opacity;
+        border: 1px solid transparent;
+      }
+    }
+
+    &__apply {
+      color: $color-dark-blue;
+      border-radius: 8px;
+      background-color: $color-btn-background;
+      outline: none;
+      border: none;
+      padding: 12px 32px;
+      margin: 0px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: $roboto;
+      cursor: pointer;
+      transition: all .3s ease;
+      border: 1px solid transparent;
+      &:hover {
+        background-color: transparent;
+        border: 1px solid $color-dark-grey-opacity;
+      }
+    }
+  }
+}
