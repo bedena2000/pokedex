@@ -3,6 +3,7 @@
 .order {
   position: relative;
   display: inline-block;
+  z-index: $orderIndex;
   &-main {
     background-color: white;
     padding: 12px 16px;

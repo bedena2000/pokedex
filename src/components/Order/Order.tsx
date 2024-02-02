@@ -14,33 +14,46 @@ const selectedList = [
   {
     title: "Lowest Number First",
     id: 0,
+    option: "lowest",
   },
   {
     title: "Highest Number First",
     id: 1,
+    option: "higher",
   },
   {
     title: "Alphabetically (A-Z)",
     id: 2,
+    option: "AZ",
   },
   {
     title: "Alphabetically (Z-A)",
     id: 3,
+    option: "ZA",
   },
 ];
+
+// Redux
+import { useDispatch } from "react-redux";
+import { changeSort } from "../../store/slices/sortSlice";
 
 const Order = () => {
   const [selected, setSelected] = useState(3);
   const [isOpen, setIsOpen] = useState(false);
 
+  const dispatch = useDispatch();
+
   const ref = useOutsideClick(() => {
     setIsOpen(false);
   });
 
-
   const handleOrder = (itemId: number) => {
     setSelected(itemId);
     setIsOpen(false);
+    const currentObject = selectedList.find((item) => item.id === itemId);
+    if (currentObject) {
+      dispatch(changeSort(currentObject.option));
+    }
   };
 
   return (

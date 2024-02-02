@@ -1,0 +1,17 @@
+@import "../../global.scss";
+
+.pokemonAbout-wrapper {
+  color: $color-dark-grey;
+  font-size: 18px;
+  font-family: $roboto;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 700;
+
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+  }
+}

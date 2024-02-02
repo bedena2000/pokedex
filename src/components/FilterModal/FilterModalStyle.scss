@@ -10,6 +10,10 @@
   position: fixed;
   top: 0px;
   right: 0px;
+  
+  @media screen and (max-width: $responsiveTablet) {
+    width: 100%;
+  }
 
   &-top {
     display: flex;
@@ -182,4 +186,8 @@
       }
     }
   }
+}
+
+.active-height {
+  background-color: $color-dark-blue;
 }

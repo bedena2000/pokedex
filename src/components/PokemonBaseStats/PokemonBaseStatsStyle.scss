@@ -1,0 +1,28 @@
+@import '../../global.scss';
+
+.pokemonBaseStats-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pokemonBaseStats-wrapper {
+  display: grid;
+  align-items: center;
+  color: $color-dark-grey;
+  font-size: 18px;
+  font-family: $roboto;
+  font-weight: 700;
+  line-height: normal;
+  font-style: normal;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  &__name {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  &__number {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+}

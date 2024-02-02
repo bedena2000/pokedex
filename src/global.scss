@@ -7,8 +7,13 @@ $color-placeholder: rgba(65, 110, 223, 0.6);
 $color-dark-grey: #212121;
 $color-dark-grey-opacity: rgba(33, 33, 33, 0.16);
 $color-hover-background: rgba(33, 33, 33, 0.08);
-$color-light-grey: #F5F7FB;
-$color-btn-background: #C9D2EA;
+$color-light-grey: #f5f7fb;
+$color-light-white: rgba(255, 255, 255, 0.8);
+$color-btn-background: #c9d2ea;
+$color-loading-background: #d3d4d8;
+$color-pokemonInfo-background: #eb6c6c;
+$color-border-color: rgba(33, 33, 33, 0.24);
+$color-pokemonSlider-color: rgba(33, 33, 33, 0.24);
 
 $roboto: "Roboto";
 
@@ -17,8 +22,9 @@ $responsiveAnotherMobile: "425px";
 $responsiveTablet: "768px";
 $responsiveLaptot: "1024px";
 
-$indexBackground: 2;
-$indexModal: 3;
+$indexBackground: 5;
+$indexModal: 6;
+$orderIndex: 4;
 
 body {
   box-sizing: border-box;
@@ -38,4 +44,20 @@ body {
 
 p {
   margin: 0px;
+}
+
+.active-btn {
+  color: black;
+  position: relative;
+
+  &::after {
+    content: '';
+
+    width: 100%;
+    height: 5px;
+    background-color: #416edf;
+    position: absolute;
+    left: 0px;
+    bottom: -13px;
+  }
 }

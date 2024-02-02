@@ -1,0 +1,49 @@
+@import "../../global.scss";
+
+.pokemonItem-wrapper {
+  cursor: pointer;
+  position: relative;
+  background-color: green;
+  border-radius: 16px;
+  box-shadow: 0px 11px 20px 0px rgba(145, 145, 145, 0.16);
+  padding-top: 119px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  &__name {
+    font-family: $roboto;
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+  }
+
+  &__number {
+    font-size: 18px;
+    font-family: $roboto;
+    font-weight: 700;
+    color: $color-light-white;
+  }
+
+  &__pokemonIcon {
+    width: 180px;
+    height: 134px;
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+
+    &__icon {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__pokemonBackground__icon {
+    position: absolute;
+    bottom: -40px;
+    left: -30px;
+  }
+}
