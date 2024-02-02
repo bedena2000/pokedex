@@ -1,5 +1,5 @@
 import "./PokemonListStyle.scss";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 // Redux
 import { useDispatch } from "react-redux";

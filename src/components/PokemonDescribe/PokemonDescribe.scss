@@ -2,17 +2,22 @@
 
 .pokemonDescribe-wrapper {
   // Top
-
+  
   background-color: $color-pokemonInfo-background;
   position: relative;
   z-index: $indexModal;
   overflow: hidden;
   box-shadow: 0px 11px 20px 0px rgba(145, 145, 145, 0.16);
   border-radius: 16px;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media screen and (max-width: $responsiveTablet) {
+    width: 90%;
+    height: 100%;
+  }
 
   &-top {
     padding: 30px 40px;
@@ -26,17 +31,40 @@
       top: 20px;
       left: 20px;
       cursor: pointer;
+
+     
     }
 
     &__info {
       display: flex;
       align-items: center;
       gap: 40px;
+
+
+      @media screen and (max-width: $responsiveAnotherMobile) {
+        gap: 10px;
+      }
+      
       &__image {
         > img {
           width: 180px;
           height: 180px;
+
+          @media screen and (max-width: $responsiveTablet) {
+            width: 120px;
+            height: 120px;
+          }
+
+          @media screen and (max-width: $responsiveAnotherMobile) {
+            width: 80px;
+            height: 80px;
+          }
         }
+
+        @media screen and (max-width: $responsiveAnotherMobile) {
+          display: none;
+        }
+
       }
 
       &__data {
@@ -75,6 +103,13 @@
           margin: 0px;
           padding: 0px;
           margin-bottom: 18px;
+
+          @media screen and (max-width: $responsiveTablet) {
+            font-size: 24px;
+          }
+
+
+
         }
       }
     }
@@ -99,6 +134,11 @@
 
       p {
         cursor: pointer;
+      }
+
+      @media screen and (max-width: $responsiveAnotherMobile) {
+        flex-direction: column;
+        gap: 30px;
       }
     }
 

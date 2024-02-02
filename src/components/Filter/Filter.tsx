@@ -1,7 +1,7 @@
 import "./FilterStyle.scss";
 
 // Redux
-import { UseSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { changeModal } from "../../store/slices/modalSlice";
 
 const Filter = () => {

@@ -1,3 +1,4 @@
+import React from "react";
 // Components
 import Search from "../../components/Search/Search";
 import PokemonLogo from "../../components/PokemonLogo/PokemonLogo";
@@ -10,6 +11,11 @@ import PokemonDescribe from "../../components/PokemonDescribe/PokemonDescribe";
 // Styles
 import "./PokemonPageStyle.scss";
 import "../../global.scss";
+
+// Lazy Loading
+const LazyComponent = React.lazy(
+  () => import("../../components/PokemonList/PokemonList")
+);
 
 // Types
 import { dataType } from "../../types/data";
@@ -34,7 +40,7 @@ const PokemonPage = () => {
       <div className="pokemonPage-filters">
         <Order />
       </div>
-      <PokemonList />
+      <LazyComponent />
     </div>
   );
 };
